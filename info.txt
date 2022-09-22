@@ -1,0 +1,6 @@
+Componentes Funcionales
+-Importar react(opcional)
+-Debe tener una funcion
+-El nombre de la funcion debe empezar con mayusculas SIEMPRE
+-La funcion debe retornar algo(siempre debe ser un solo elemento padre)
+-Se debe exportar la funcion

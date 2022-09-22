@@ -1,0 +1,10 @@
+header{
+    display: flex; 
+    align-items: center;
+}
+img{
+    height: 10%;
+}
+a{
+    margin: 10px
+}
