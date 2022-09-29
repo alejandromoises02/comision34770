@@ -1,6 +1,6 @@
 import React from "react";
 import logo from "../../assets/logo.jpeg";
-import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
+import { CartWidget } from "../CartWidget/CartWidget";
 import { styles } from "./Navbar.style";
 
 const Navbar = ({ nombreUsuario, apellidoUsuario, children }) => {
@@ -23,7 +23,7 @@ const Navbar = ({ nombreUsuario, apellidoUsuario, children }) => {
           })
         }
       </nav>
-      <ShoppingCartIcon color="primary" fontSize="large" />
+      <CartWidget />
     </header>
   );
 };
