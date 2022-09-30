@@ -17,8 +17,6 @@ const App = () => {
     <>
       <Navbar nombreUsuario={nombre} apellidoUsuario="Fernandez" />
       <ItemListContainer greeting={mensaje} mansaje="eso es toddy la preentrega"/>
-      <Usuarios />
-      <ComponenteEstados stock={5} initial={1} onAdd={onAdd}/>
     </>
   );
 };
