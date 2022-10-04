@@ -17,3 +17,35 @@ hooks
 -Siempre se declaran dentro de un Componentes
 -Son Funciones
 -No se pueden declarar en condicionales(if)
+
+Ciclo de vida de componentes y Metodos
+
+-Montaje(Mount)
+    -constructor
+    -render
+    -componentDidMount
+
+-Actualizacion(Update)
+    -constructor
+    -render
+    -componentDidUpdate
+
+-Desmontaje(Unmount)
+    -componentWillUnmount
+
+useEffect
+
+Con esta configuracion el useEffect se ejecuta solo en el montaje
+useEffect(()=>{
+    //bloque de codigo
+  },[]);
+
+Con esta configuracion el useEffect se ejecuta en el montaje y cuando detecta cambios en valores del array de dependencia
+useEffect(()=>{
+    //bloque de codigo
+  },[valores]);
+
+Con esta configuracion el useEffect se ejecuta en el montaje y actualizaciones
+useEffect(()=>{
+    //bloque de codigo
+  });

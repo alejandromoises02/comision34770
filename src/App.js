@@ -1,24 +1,28 @@
-import React from "react";
+import React, {useState} from "react";
 import "./App.css";
 import Navbar from "./Components/Navbar/Navbar";
 import { ItemListContainer } from './Containers/ItemListContainer'
 import {ComponenteEstados} from './ComponenteEstados'
-import {Usuarios} from './Usuarios'
 
 const App = () => {
-  const nombre = "Luis";
-  const mensaje = "Hola a todos los que se quedaron a los postcreditos"
+  const mensaje = "Las mejores ofertas"
 
-  const onAdd =() => {
-    console.log("agregaste algo al carrito");
+  const [show, setShow] = useState(true);
+
+  const alternar = ()=>{
+    setShow(!show);
   }
 
   return (
     <>
-      <Navbar nombreUsuario={nombre} apellidoUsuario="Fernandez" />
-      <ItemListContainer greeting={mensaje} mansaje="eso es toddy la preentrega"/>
+      <Navbar />
+      <ItemListContainer greeting={mensaje} />
     </>
   );
 };
 
 export default App;
+
+/*{show ? <ComponenteEstados /> : <h1>Aca no hay nada</h1>}
+      <button onClick={alternar}>Alternar</button>*/
+

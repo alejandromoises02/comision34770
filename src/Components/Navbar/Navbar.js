@@ -3,7 +3,7 @@ import logo from "../../assets/logo.jpeg";
 import { CartWidget } from "../CartWidget/CartWidget";
 import { styles } from "./Navbar.style";
 
-const Navbar = ({ nombreUsuario, apellidoUsuario, children }) => {
+const Navbar = () => {
 
 
   const categorias = [
@@ -15,7 +15,7 @@ const Navbar = ({ nombreUsuario, apellidoUsuario, children }) => {
   return (
     <header style={styles.container}>
       <img style={styles.imagenes} src={logo} alt="tienda online" />
-      <h1>Bienvendio {nombreUsuario}</h1>
+      <h1>Bienvendio</h1>
       <nav>
         {
           categorias.map((categoria)=>{
