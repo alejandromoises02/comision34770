@@ -49,3 +49,39 @@ Con esta configuracion el useEffect se ejecuta en el montaje y actualizaciones
 useEffect(()=>{
     //bloque de codigo
   });
+
+
+XHR - Fetch(then async/await axios)
+
+http:
+
+A - B 
+Request - Response
+Cliente - Server
+
+
+Request-Cliente:
+  -URL
+  -Metodo GET - POST - DELETE - PUT
+  -Headers
+  -Body
+  -Version 1.1
+
+Response-Server
+  -Version
+  -Headers
+  -Body
+  -Condigo 100-200-300-400-500
+
+AJAX asynchronous js and xml 
+
+fetch(url,{
+  method: "POST",
+  headers: {
+    'Content-Type': 'application/json'
+  },
+  body: JSON.stringify({nombre:"Ale"})
+})
+
+fetch(url)
+
