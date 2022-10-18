@@ -17,7 +17,11 @@ export const ItemListContainer = ({ greeting }) => {
       try {
         const res = await fetch(id ? URL_CAT : URL_BASE);
         const data = await res.json();
-        setProducts(data);
+        const productos = data.map(item => {
+          return {...item, stock:Math.floor(Math.random() * 50)}
+        });
+        console.log(productos);
+        setProducts(productos);
       } catch {
         console.log("error");
       } finally {
