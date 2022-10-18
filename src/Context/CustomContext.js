@@ -8,8 +8,8 @@ export const CustomProvider = ({ children }) => {
   const [total, setTotal] = useState(0);
 
   useEffect(() => {
-    const cantidad = 0;
-    const totalC = 0;
+    let cantidad = 0;
+    let totalC = 0;
     cart.forEach((item) => {
       cantidad += item.cantidad;
       totalC += item.price * item.cantidad;
@@ -19,10 +19,7 @@ export const CustomProvider = ({ children }) => {
   }, [cart]);
 
   const addItem = (item, cantidad) => {
-    console.log(item);
-    console.log(
-      `esta funcion se encarga de agregar ${cantidad} cantidades del producto ${item} al carrito`
-    );
+    IsInCart(item.id)
   };
 
   const deleteItem = (id) => {
