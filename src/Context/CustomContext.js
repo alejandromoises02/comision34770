@@ -4,7 +4,7 @@ export const Context = createContext();
 
 export const CustomProvider = ({ children }) => {
   const [cart, setCart] = useState([]);
-  const [qty, setQty] = useState(5);
+  const [qty, setQty] = useState(0);
   const [total, setTotal] = useState(0);
 
   useEffect(() => {
@@ -19,7 +19,7 @@ export const CustomProvider = ({ children }) => {
   }, [cart]);
 
   const addItem = (item, cantidad) => {
-    IsInCart(item.id)
+    IsInCart(item.id);
   };
 
   const deleteItem = (id) => {

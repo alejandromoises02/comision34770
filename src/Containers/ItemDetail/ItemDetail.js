@@ -12,21 +12,24 @@ const ItemDetail = ({ product }) => {
     setShowItemCount(false);
   };
 
-  return (
-    <div>
-      <img alt={product.title} src={product.image} />
-      <h1>{product.title}</h1>
-      <span>{product.description}</span>
-      <h2>{product.price}</h2>
-      {showItemCount ? (
-        <ItemCount initial={1} stock={5} onAdd={onAdd} />
-      ) : (
-        <Link to={'/cart'}>
-          <button>Finalizar Compra</button>
-        </Link>
-      )}
-    </div>
-  );
+  if(showItemCount){
+    return (
+      <div>
+        <img alt={product.title} src={product.image} />
+        <h1>{product.title}</h1>
+        <span>{product.description}</span>
+        <h2>{product.price}</h2>
+        {showItemCount ? (
+          <ItemCount initial={1} stock={5} onAdd={onAdd} />
+        ) : (
+          <Link to={'/cart'}>
+            <button>Finalizar Compra</button>
+          </Link>
+        )}
+      </div>
+    );
+  }
+  
 };
 
 export default ItemDetail;
