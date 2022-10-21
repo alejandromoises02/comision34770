@@ -50,7 +50,7 @@ export const CustomProvider = ({ children }) => {
   };
 
   return (
-    <Context.Provider value={{ cart, qty, total, addItem, deleteItem, clear }}>
+    <Context.Provider value={{ cart, qty, total, addItem, deleteItem, clear, IsInCart }}>
       {children}
     </Context.Provider>
   );
