@@ -2,11 +2,19 @@ import React, { useState, useContext } from "react";
 import ItemCount from "../../Components/ItemCount/ItemCount";
 import { Link } from "react-router-dom";
 import { Context } from "../../Context/CustomContext";
-import { Login } from "@mui/icons-material";
+
 
 const ItemDetail = ({ product }) => {
   const [isPressedButton, setIsPressedButton] = useState(false);
-  const { addItem } = useContext(Context);
+  const { cart, addItem, IsInCart} = useContext(Context);
+
+  let stock = 0;
+  if(IsInCart(product.id)){
+    const found = cart.find(item => item.id === product.id);
+    stock = product.stock - found.cantidad;
+  }else{
+    stock = product.stock;
+  }
 
   const onAdd = (count) => {
     setIsPressedButton(true);
@@ -20,7 +28,7 @@ const ItemDetail = ({ product }) => {
       <span>{product.description}</span>
       <h2>{product.price}</h2>
       {!isPressedButton ? (
-        <ItemCount stock={10} initial={1} onAdd={onAdd} />
+        <ItemCount stock={stock} initial={1} onAdd={onAdd} />
       ) : (
         <Link to="/cart">
           <button>Finalizar Compra</button>
