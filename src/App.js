@@ -6,12 +6,9 @@ import { ItemDetailContainer } from "./Containers/ItemDetailContainer/ItemDetail
 import { Cart } from "./Containers/CartView/Cart";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { CustomProvider } from "./Context/CustomContext";
-import { Dashboard } from "@mui/icons-material";
 
 const App = () => {
   const mensaje = "Las mejores ofertas";
-
-  
 
   return (
     <BrowserRouter>

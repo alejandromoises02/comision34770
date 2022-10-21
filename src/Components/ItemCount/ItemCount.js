@@ -15,7 +15,6 @@ const ItemCount = ({ stock, initial, onAdd }) => {
     }
   };
 
-
   return (
     <div>
       <button onClick={subtract}>-</button>
