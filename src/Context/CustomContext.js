@@ -8,8 +8,8 @@ export const CustomProvider = ({ children }) => {
   const [total, setTotal] = useState(0);
 
   useEffect(() => {
-    setQty(carrito.reduce((total, item) => total + item.cantidad, 0))
-    setTotal(carrito.reduce((total, item) => total + (item.cantidad * item.price), 0))
+    setQty(cart.reduce((total, item) => total + item.cantidad, 0))
+    setTotal(cart.reduce((total, item) => total + (item.cantidad * item.price), 0))
   }, [])
   
 
