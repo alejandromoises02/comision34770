@@ -15,7 +15,7 @@ export const ItemListContainer = ({ greeting }) => {
 
   
   const productCollection = collection(db, "productos");
-  const q = query(productCollection, where('category', '==', "women's clothing" ))
+  const q = query(productCollection, where('categoria', '==', 'HubcJ2cKgYczmaJMJryc' ))
 
   useEffect(() => {
     getDocs(productCollection)

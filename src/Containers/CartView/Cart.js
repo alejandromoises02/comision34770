@@ -2,9 +2,43 @@ import React, { useContext } from "react";
 import { Context } from "../../Context/CustomContext";
 import { Link } from "react-router-dom";
 import "./Cart.css";
+import { db } from "../../firebase/firebase";
+import { collection, addDoc, serverTimestamp, doc, updateDoc } from "firebase/firestore"
 
 export const Cart = ({ estilo, color }) => {
-  const { cart } = useContext(Context);
+  const { cart, total, clear } = useContext(Context);
+
+  const comprador = {
+    nombre: 'Gaston',
+    apellido: 'Rodri',
+    email: 'tonga@tonga.com'
+  };
+
+  const finalizarCompra = ()=>{
+    const ventasCollection = collection(db,"ventas");
+    addDoc(ventasCollection,{
+      comprador,
+      items:[{nombre:'banana'},{nombre:'pera'}],
+      total: 200,
+      date:serverTimestamp()
+    })
+    .then(result=>{
+      console.log(result.id);
+    })
+    .catch(e => {
+      console.log('todo mal');
+      console.log(e);
+    });
+    
+    clear();
+  }
+
+  const actualizarStock = ()=>{
+    const updateStock = doc(db, "productos","KwnjSlyDslt1IneySzVr")
+    updateDoc(updateStock,{stock:100})
+  }
+
+
   return (
     <>
       {cart.length === 0 ? (
@@ -21,6 +55,7 @@ export const Cart = ({ estilo, color }) => {
           ))}
         </>
       )}
+      <button onClick={actualizarStock}>finalizar compra</button>
     </>
   );
 };
