@@ -85,3 +85,16 @@ fetch(url,{
 
 fetch(url)
 
+
+Errores Comunes
+
+-Codigo comentado
+-Exceso de comentarios
+-Logs de debug
+-Orden en carpetas
+-Archivos y carpetas no usados
+-Codigo repetido, dry
+-Errores y warnings en consola sobre el codigo
+-Evitar componentes pasamanos
+-No traer data filtrada
+-Evitar uso de alerts y prompts
