@@ -1,29 +1,26 @@
-# Esto es como un h1
-## Esto es como un h2
-### Esto es como un h3
-#### Esto es como un h4
-##### Esto es como un h5
-###### Esto es como un h6
+# Esto es un mensaje en grande
+## Esto es un mensaje mediano
+### Esto es un mensaje pequeño
 
-Esto es como p en html
+Esto es como un paragrafo
 
-Se uso
+En este proyecto se uso:
 * firebase
-* rrd
 * material ui
+* axios
 
 Pasos para reproducirlo
 1. Clona el repo
->enlace al repo
+>url repo
 2. Haz un npm i
-3. Haz un npm install
+3. Haz un npm start
 
-```text```
+```Un texto```
 > otro texto
 
 **negritas bold**
-_cursiva_
+_cursiva italic_
 
 [ir al repo](https://github.com/alejandromoises02/comision34770)
+![imagen del mundial](./public/assets/mundial.jpeg)
 
-![imagen bonita](./public/assets/imagen.jpeg)
